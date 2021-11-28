@@ -1,0 +1,5 @@
+server:
+  port: 9000
+
+rest:
+ url: http://localhost:8000/goods/getGoods/id=1
