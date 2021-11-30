@@ -7,9 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Eure_server" />
+        <module name="Nacos_provider" />
+        <module name="Nacos_consumer" />
         <module name="Eureka_provider" />
         <module name="Eureka_consumer" />
-        <module name="Eure_server" />
       </profile>
     </annotationProcessing>
   </component>
@@ -18,6 +20,8 @@
       <module name="Eure_server" options="-parameters" />
       <module name="Eureka_consumer" options="-parameters" />
       <module name="Eureka_provider" options="-parameters" />
+      <module name="Nacos_consumer" options="-parameters" />
+      <module name="Nacos_provider" options="-parameters" />
     </option>
   </component>
 </project>

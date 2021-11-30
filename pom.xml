@@ -12,6 +12,7 @@
         <module>Eureka_provider</module>
         <module>Eureka_consumer</module>
         <module>Eure_server</module>
+        <module>Nacos_provider</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
