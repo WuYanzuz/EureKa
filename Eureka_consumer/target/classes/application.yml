@@ -3,3 +3,14 @@ server:
 
 rest:
  url: http://localhost:8000/goods/getGoods/id=1
+
+spring:
+  application:
+    name: Eureka_consumer
+
+eureka:
+  instance:
+    hostname: localhost #主机名
+  client:
+    server-url:
+      dafaultzone: http://localhost:8671/eureka #eureka服务端的地址
