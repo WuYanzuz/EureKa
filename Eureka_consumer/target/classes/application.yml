@@ -6,7 +6,7 @@ rest:
 
 spring:
   application:
-    name: Eureka_consumer
+    name: EUREKA-CONSUMER
 
 eureka:
   instance:

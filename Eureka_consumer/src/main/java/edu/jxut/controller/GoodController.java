@@ -29,7 +29,7 @@ public class GoodController {
 
     @GetMapping("/goods/{id}")
     public Good findGoodById(@PathVariable("id") String id){
-        List<ServiceInstance> instances = discoveryClient.getInstances("EUREKA_PROVIDER");
+        List<ServiceInstance> instances = discoveryClient.getInstances("EUREKA-PROVIDER");
         ServiceInstance serviceInstance = instances.get(0);
         String host = serviceInstance.getHost();
         String port = String.valueOf(serviceInstance.getPort());
@@ -40,6 +40,16 @@ public class GoodController {
         System.out.println(host);
         System.out.println(port);
         String lj="http://"+host+":"+port+"/goods/getGoods/id=1";
+
+        Good good = restTemplate.getForObject(lj, Good.class);
+        return good;
+    }
+
+
+    @GetMapping("/goods2/{id}")
+    public Good findGoodById2(@PathVariable("id") String id){
+
+        String lj="http://EUREKA-PROVIDER/goods/getGoods/id=1";
 
         Good good = restTemplate.getForObject(lj, Good.class);
         return good;
